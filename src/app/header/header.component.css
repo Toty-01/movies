@@ -1,0 +1,9 @@
+.navbar {
+  background-color: lightgray;
+  display: flex;
+  font-weight: 500;
+}
+.ancres {
+  text-decoration: none;
+
+}
