@@ -1,6 +1,13 @@
 button {
   cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  margin-left: 41%;
 }
 .row {
   justify-content: center;
+}
+.form-group {
+  display: flex;
+  flex-direction: column;
 }

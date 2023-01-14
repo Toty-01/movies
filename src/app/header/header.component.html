@@ -11,11 +11,14 @@
       </li>
     </ul>
     <ul class="nav navbar-nav navbar-right">
-      <li routerLinkActive="active">
-        <a class="ancres" routerLink="auth/signup">Créer compte</a>
+      <li routerLinkActive="active" *ngIf="!isAuth">
+        <a class="ancres" routerLink="auth/signup"><button class="btn btn-primary">Créer compte</button></a>
+      </li>
+      <li routerLinkActive="active" *ngIf="!isAuth">
+        <a class="ancres" routerLink="auth/signin"><button class="btn btn-primary">Connexion</button> </a>
       </li>
       <li routerLinkActive="active">
-        <a class="ancres" routerLink="auth/signin">Connexion</a>
+        <a (click)="onSignOut()" style="cursor:pointer" *ngIf="isAuth">Déconnexion</a>
       </li>
     </ul>
   </div>
