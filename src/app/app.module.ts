@@ -13,7 +13,6 @@ import { MoviesService } from './services/movies.service';
 import { AuthGuardService } from './services/auth-guard.service';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
-import { RouterModule } from '@angular/router';
 import { HeaderComponent } from './header/header.component';
 
 @NgModule({
@@ -32,7 +31,6 @@ import { HeaderComponent } from './header/header.component';
     ReactiveFormsModule,
     HttpClientModule,
     AppRoutingModule,
-    RouterModule
   ],
   providers: [AuthService, MoviesService, AuthGuardService],
   bootstrap: [AppComponent]

@@ -1,1 +1,10 @@
-<p>single-movie works!</p>
+<div class="row">
+  <div class="col-xs-12">
+    <h1>{{movie.title}}</h1>
+    <h3><strong>Réalisateur :</strong> {{ movie.director }}</h3>
+    <p>{{movie.synopsis}}</p>
+    <p><strong>Année : </strong>{{movie.year}}</p>
+    <button class="btn btn-default" (click)="onBack()">Retour</button>
+  </div>
+</div>
+

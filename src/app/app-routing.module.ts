@@ -8,14 +8,14 @@ import { SingleMovieComponent } from './movie-list/single-movie/single-movie.com
 import { AuthGuardService } from './services/auth-guard.service';
 
 const routes: Routes = [
-  { path: 'auth/signup', component: SignupComponent},
-  { path: 'auth/signin', component: SigninComponent},
-  { path: 'movies', canActivate: [AuthGuardService], component: MovieListComponent},
-  { path: 'movies/new', canActivate: [AuthGuardService], component: MovieFormComponent},
-  { path: 'movie/view/:id', canActivate: [AuthGuardService], component: SingleMovieComponent},
-  { path: "", redirectTo: "movies", pathMatch: "full"},
-  { path: "**", redirectTo: "movies"},
-];
+  { path: 'auth/signup', component: SignupComponent },
+  { path: 'auth/signin', component: SigninComponent },
+  { path: 'movies', canActivate: [AuthGuardService], component: MovieListComponent },
+  { path: 'movies/new', canActivate: [AuthGuardService], component: MovieFormComponent },
+  { path: 'movie/view/:id', canActivate: [AuthGuardService], component: SingleMovieComponent },
+  { path: '', redirectTo: 'movies', pathMatch: "full" },
+  { path: '**', redirectTo: 'movies' },
+]
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

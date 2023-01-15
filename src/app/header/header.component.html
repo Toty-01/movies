@@ -2,23 +2,30 @@
   <div class="container-fluid">
     <ul class="nav navbar-nav">
       <li routerLinkActive="active">
-         <a class="ancres" routerLink="movies">FILMS</a>
-      </li>
-    </ul>
-    <ul class="nav">
-      <li routerLinkActive="active">
-        <h2>MOVIEZ</h2>
+         <a class="ancres" routerLink="movies"><h1>MOVIZ</h1></a>
       </li>
     </ul>
     <ul class="nav navbar-nav navbar-right">
       <li routerLinkActive="active" *ngIf="!isAuth">
-        <a class="ancres" routerLink="auth/signup"><button class="btn btn-primary">Créer compte</button></a>
+        <a class="ancres" routerLink="auth/signup">
+          <button class="btn btn-primary">
+            Créer compte
+          </button>
+        </a>
       </li>
       <li routerLinkActive="active" *ngIf="!isAuth">
-        <a class="ancres" routerLink="auth/signin"><button class="btn btn-primary">Connexion</button> </a>
+        <a class="ancres" routerLink="auth/signin">
+          <button class="btn btn-primary">
+            Connexion
+          </button>
+        </a>
       </li>
       <li routerLinkActive="active">
-        <a (click)="onSignOut()" style="cursor:pointer" *ngIf="isAuth">Déconnexion</a>
+        <a (click)="onSignOut()" style="cursor:pointer" *ngIf="isAuth">
+          <button class="btn btn-danger">
+            Déconnexion
+          </button>
+        </a>
       </li>
     </ul>
   </div>

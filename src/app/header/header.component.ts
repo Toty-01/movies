@@ -11,7 +11,7 @@ import 'firebase/compat/firestore';
 })
 export class HeaderComponent implements OnInit {
 
-  isAuth: boolean | undefined;
+  isAuth: boolean | any;
 
   constructor(private authService: AuthService) {}
 

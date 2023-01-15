@@ -1,8 +1,7 @@
 button {
-  cursor: pointer;
+  display: flex;
   align-items: center;
   justify-content: center;
-  margin-left: 41%;
 }
 .row {
   justify-content: center;
@@ -10,4 +9,10 @@ button {
 .form-group {
   display: flex;
   flex-direction: column;
+}
+.btns {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
 }
