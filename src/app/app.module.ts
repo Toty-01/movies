@@ -23,7 +23,7 @@ import { HeaderComponent } from './header/header.component';
     SingleMovieComponent,
     MovieFormComponent,
     MovieListComponent,
-    HeaderComponent
+    HeaderComponent,
   ],
   imports: [
     BrowserModule,
@@ -32,7 +32,8 @@ import { HeaderComponent } from './header/header.component';
     HttpClientModule,
     AppRoutingModule,
   ],
-  providers: [AuthService, MoviesService, AuthGuardService],
+  // AuthGuardService
+  providers: [ AuthService, MoviesService ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

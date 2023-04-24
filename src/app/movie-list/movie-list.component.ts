@@ -9,15 +9,15 @@ import { MoviesService } from '../services/movies.service';
   templateUrl: './movie-list.component.html',
   styleUrls: ['./movie-list.component.css']
 })
-export class MovieListComponent implements OnDestroy {
+export class MovieListComponent implements OnInit, OnDestroy {
 
-  movies: Movie[] | any;
-  movieSubscription: Subscription | any;
+  movies?: Movie[];
+  moviesSubscription?: Subscription;
 
   constructor(private moviesService: MoviesService, private router: Router) {}
 
   ngOnInit(): void {
-    this.movieSubscription = this.moviesService.movieSubject.subscribe(
+    this.moviesSubscription = this.moviesService.movieSubject.subscribe(
       (movies: Movie[]) => {
         this.movies = movies
       }
@@ -39,7 +39,7 @@ export class MovieListComponent implements OnDestroy {
   }
 
   ngOnDestroy(): void {
-    this.movieSubscription?.unsubscribe()
+    this.moviesSubscription?.unsubscribe()
   }
 
 }

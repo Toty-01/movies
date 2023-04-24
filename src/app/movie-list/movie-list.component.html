@@ -1,17 +1,18 @@
 <div class="row">
   <div class="col-xs-12">
-    <h2>Vos films</h2>
+    <h2 class="my-5">Vos films</h2>
     <div class="list-group">
       <div class="list-group-item" *ngFor="let movie of movies; let i = index" (click)="onViewMovie(i)">
          <h3 class="list-group-item-heading">
           {{movie.title}}
-          <button class="btn btn-default pull-right" (click)="onDeleteMovie(movie)">
-             <span class="glyphicon glyphicon-minus"></span>
+          <button class="btn btn-default" (click)="onDeleteMovie(movie)">
+             <i class="fas fa-trash" style="color:red"></i>
           </button>
          </h3>
-         <p class="list-group-item-text">{{movie.director}} | Année : {{movie.year}}</p>
+         <p class="list-group-item-text"><strong>{{movie.director.toLocaleUpperCase()}}</strong> | Année : {{movie.year}}</p>
       </div>
     </div>
-    <button class="btn btn-primary" (click)="onNewMovie()">Ajouter film</button>
+    <button class="btn btn-primary my-5" (click)="onNewMovie()"><i class="fas fa-solid fa-plus"></i> Ajouter film</button>
   </div>
 </div>
+

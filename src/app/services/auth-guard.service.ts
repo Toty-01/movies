@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { CanActivate, Router } from '@angular/router';
 import firebase from 'firebase/compat/app';
 import 'firebase/compat/auth';
+import 'firebase/compat/database';
 import 'firebase/compat/firestore';
 import { Observable } from 'rxjs';
 
@@ -20,7 +21,7 @@ export class AuthGuardService implements CanActivate {
             if (user) {
               resolve(true)
             } else {
-              this.router.navigate(['/auth', "signin"])
+              this.router.navigate(['/auth', 'signin'])
               resolve(false)
             }
           }
