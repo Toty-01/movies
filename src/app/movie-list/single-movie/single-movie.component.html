@@ -1,10 +1,11 @@
 <div class="row">
   <div class="col-xs-12">
-    <h1>{{movie.title}}</h1>
-    <h3><strong>Réalisateur :</strong> {{ movie.director }}</h3>
+    <h1 class="mt-5 mb-4">{{movie.title.toUpperCase()}}</h1>
+    <h2><strong>Réalisateur :</strong> {{ movie.director }}</h2>
+    <h3><strong>Année : </strong>{{movie.year}}</h3>
+    <p><strong> Synopsis :</strong></p>
     <p>{{movie.synopsis}}</p>
-    <p><strong>Année : </strong>{{movie.year}}</p>
-    <button class="btn btn-default" (click)="onBack()">Retour</button>
+    <button type="button" class="btn btn-primary my-5" (click)="onBack()"><i class="fa-solid fa-arrow-left"></i> Retour</button>
   </div>
 </div>
 

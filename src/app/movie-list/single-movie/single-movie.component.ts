@@ -15,8 +15,8 @@ export class SingleMovieComponent implements OnInit {
   constructor(private route: ActivatedRoute, private moviesService: MoviesService, private router: Router) {}
 
   ngOnInit(): void {
-    this.movie = new Movie("", "", "");
-    const id = this.route.snapshot.params["id"]
+    this.movie = new Movie('', '', '');
+    const id = this.route.snapshot.params['id']
     this.moviesService.getSingleMovie(+id).then(
       (movie: Movie | any) => {
         this.movie = movie

@@ -35,7 +35,7 @@ export class MovieListComponent implements OnInit, OnDestroy {
   }
 
   onViewMovie(id: number) {
-    this.router.navigate(["/movies", "view", id])
+    this.router.navigate(["/movie", "view", id])
   }
 
   ngOnDestroy(): void {
